@@ -1,0 +1,146 @@
+body{
+    background-color: rgb(123, 123, 149);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.viewp{
+    min-height: 100vh;
+}
+.btn.btn1{
+    background: none;
+    color: rgb(33, 30, 30);
+    border: 1px solid rgb(153, 205, 238);
+   
+    border-radius: 15%;
+    width: fit-content;
+    box-shadow:2px 2px 4px rgb(41, 69, 86);
+
+
+}
+.btn.btn1:hover{
+    color: white;
+    text-transform: uppercase;
+}
+.slideshow{
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+    animation: slide  20s infinite ;
+}
+
+#card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+#navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    width: 100vw;
+}
+#logo{
+    font-size:xx-large;
+}
+
+#p1{
+    font-size: large;
+}
+#p2{
+    font-size: larger;
+}
+#submit:hover{
+    color: rgb(44, 196, 234);
+    background-color: yellowgreen;
+}
+.nav-item:hover{
+    text-transform: uppercase;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px white;
+    
+
+}
+#signheader{
+    text-shadow: 2px 2px 3px #000000;
+}
+#getstarted{
+    text-shadow: 2px 2px 2px rgb(188, 125, 8);
+}
+#getstarted:hover{
+    box-shadow: 2px 2px 5px rgb(208, 139, 2);
+
+}
+#indexh1{
+    font-weight: bolder;
+    
+}
+#text{
+    text-shadow: 3px 2px 4px rgb(47, 47, 47);
+}
+#about div{
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2%;
+    background-color: rgb(84, 106, 129);
+    box-shadow: 3px 3px 4px rgb(27, 36, 44);
+}
+#about_col1{
+    font-size: 100%;
+    color:rgb(255, 255, 255);
+    background-color: rgb(84, 106, 129);
+    height: 100vh;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 4px rgb(35, 34, 34);
+}
+#wrapper > img{
+    position: absolute;
+    animation: animate 25s infinite;
+    opacity: 0;
+}
+#wrapper > img:nth-child(2){
+    animation-delay: 5s;
+}
+#wrapper > img:nth-child(3){
+    animation-delay: 10s;
+}
+@keyframes animate{
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 2;
+    }
+    75%{
+        opacity: 3;
+    }
+}
+#btncollection{
+    position: static;
+    top: 50px;
+    z-index: 1;
+    border-bottom: 2px gray;
+}
+#trendsh1{
+    color: rgb(0, 81, 89);
+    text-shadow:2px 2px 3px #020200;
+}
+#slideshow{
+    padding-right: 5px;
+    box-shadow: 3px 3px 4px black;
+}
+.card{
+    box-shadow: 3px 8px 5px black;
+}

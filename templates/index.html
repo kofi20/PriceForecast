@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page %}{% endblock %}</title>
+
+    {% block content %}
+      <!-- intro -->
+    <div class="continer text-center" id="intro">
+    <div class="row align-items-start">
+      <!-- the word section of the intro -->
+      <div class="container col-5 px-5 py-3" id="text">
+        <div class="container text-start">
+            <h1 id="indexh1">Maximize Your Profits With Data Driven Insights</h1>
+            <!-- container section of the first heading -->
+        </div>    
+        
+      
+      <!-- heading 2 -->
+      <div class="container pt-5 text-start text-light">
+        <h4>Invest Smarter With our intuitive <br> Price Forecasting</h4>
+      </div>
+      <div class="text-white pt-5 ">
+        <h5 id="indexh2">Make better planning with retail preice forecasts</h5>
+        <h5 class="pt-2">Procure better with the wholesale price forecasts</h5>
+      </div>
+      <!-- the word section of intro -->
+      </div>
+      <!-- the pic of the intro -->
+      <div class="col-7 pt-3">
+        <img src="/static/images/kobu-agency-hTtK6tvTRY0-unsplash.jpg" alt="">
+      </div>
+    </div>
+    </div>
+    <!-- button -->
+    <div class="container text-center py-4 pb-5">
+      <a  href="dashboard.html" role="button" >
+        <span >
+          <button type="button" id="getstarted" class="btn btn-outline-warning rounded-pill ">Get Started</button>
+        </span>
+      </a>
+
+    </div>
+    {% endblock %}
+    
+
+      
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>   
+</body>
+
+</html>

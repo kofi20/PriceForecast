@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+<div id="card" class="container pt-5" >
+ <div class="card w-75 shadow-lg ">
+    <div class="card-header text-center shadow-sm bg-primary-subtle">
+        <h3 id="signheader">Sign up For an account</h3>
+    </div>
+    <div class="card-body">
+        <form action="/sign_up.html" method="POST" class="ps-3">
+          {{ form.csrf_token }}
+            <div class="col row g-3 align-items-center ">
+                <div class="col-auto">
+                 
+                  {{form.firstName.label}}
+                </div>
+                <div class="col-auto">
+                  {% if form.firstName.errors %}
+                  {{form.firstName (class="form-control shadow-sm is-invalid")}}
+                  {%else%}
+                  {{form.firstName (class="form-control shadow-sm")}}
+                  {%endif%}
+                  
+                </div>
+                <div class="col-auto">
+                    {{form.secondName (class="form-control shadow-sm")}}
+                </div>
+              </div>
+            
+            
+            <div class="col row g-3 align-items-center pt-2">
+                <div class="col-auto"> 
+                  {{form.email.label}}
+                </div>
+                <div class="col-auto w-50">
+                {{form.email (class="form-control shadow-sm", type="email" )}}
+                </div>
+            </div>
+            <div class="col row g-3 align-items-center pt-2"> 
+                <div class="col-auto">
+                  {{form.phoneNumber.label}} 
+                </div>
+                <div class="col-auto">
+                  {{form.phoneNumber (class="form-control shadow-sm")}}
+                </div>
+            </div>
+            <!-- password -->
+            <div class="col row g-3 align-items-center pt-2">
+                <div class="col-auto">
+                  {{form.password.label}} 
+                </div>
+                <div class="col-auto">
+                {{form.password (class="form-control shadow-sm")}}
+                </div>
+            </div>
+            <div class="col row g-3 align-items-center pt-2">
+                <div class="col-auto">
+                  {{form.confirm_password.label}}
+                </div>
+                <div class="col-auto">
+                {{form.confirm_password (class="form-control shadow-sm")}}
+                </div>
+            </div>
+            <div class="container text-center py-2 ">
+                {{form.submit (class="btn bg-primary-subtle w-auto shadow-lg", id="submit")}}
+              </div>
+            </form>
+            
+          </div>
+            </div>
+            </div>
+   
+
+
+{% endblock %}
