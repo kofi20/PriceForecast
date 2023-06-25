@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from flask import Flask
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, SubmitField,SelectField
+from wtforms import StringField, SubmitField, PasswordField, SubmitField,SelectField,DateField
 from wtforms.validators import DataRequired, email_validator, Length, EqualTo
 from datetime import datetime
 
@@ -31,6 +31,11 @@ class signupForm(FlaskForm):
 class user_input(FlaskForm):
     commodity = SelectField('Choose commodity To foreast', choices=[('sg', 'Sugar'),
                  ('mz', 'Maize'), ('rc', 'Rice'), ('bn', 'Beans')])
+    
+    forecasted_date = SelectField('Choose Month in which to forecast', choices=[('Jan', 'January'),
+    ('Feb', 'Febuary'), ('Mar', 'March'), ('Apr', 'April'), ('May', 'May'), ('Jun', 'June'), 
+    ('Jul', 'July'), ('Aug', 'August'), ('Sep', 'September'), ('Oct', 'October'), ('Nov', 'November'), ('Dec', 'December')])
+    submit = SubmitField('Forecast')
     
 
 
@@ -68,17 +73,19 @@ def sign_up():
         
     else: flash(form.errors)
 
+
         
+           
     
-    
-    
-    return render_template('sign_up.html', 
-    
+    return render_template('sign_up.html',  
     form = form)
 
 @app.route('/dashboard.html', methods = ['GET', 'POST']) 
 def dashboard():
     form = user_input()
+    # logic for choosing date
+    
+
     return render_template('dashboard.html', form = form)
 
 
